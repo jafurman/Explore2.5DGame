@@ -47,10 +47,4 @@ public class ThirdPersonController : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
     }
 
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Vector3 raycastStart = transform.position - new Vector3(0, controller.height / 2, 0);
-        Gizmos.DrawLine(raycastStart, raycastStart + Vector3.down * groundCheckDistance);
-    }
 }
